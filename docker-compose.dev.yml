@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: gangsan-lv3f-app
+    image: gangsan-kim/lv3-final-mission:latest
+    env_file:
+      - .env.dev
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: dev

@@ -1,0 +1,10 @@
+spring:
+  config:
+    import: optional:file:.env.local[.properties]
+
+# Local development specific configurations
+logging:
+  level:
+    root: INFO
+    finalmission.matchmaking: DEBUG
+    org.springframework.web: DEBUG

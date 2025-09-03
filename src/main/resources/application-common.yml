@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: lv3-final-mission
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: ${DB_DRIVER}
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO:update}
+    show-sql: ${JPA_SHOW_SQL:true}
+    properties:
+      hibernate:
+        dialect: ${JPA_DIALECT}
+
+resend:
+  apikey: ${RESEND_KEY}
+
+mail:
+  from: ${RESEND_MAIL_SENDER}

@@ -1,0 +1,9 @@
+spring:
+  config:
+    import: optional:file:.env.dev[.properties]
+
+# Development environment specific configurations
+logging:
+  level:
+    root: WARN
+    finalmission.matchmaking: INFO
