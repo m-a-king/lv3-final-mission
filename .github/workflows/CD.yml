@@ -84,8 +84,8 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
-            gangsan-kim/lv3-final-mission:${{ steps.set_short_sha.outputs.short_sha }}
-            gangsan-kim/lv3-final-mission:latest
+            makingjjj/lv3-final-mission:${{ steps.set_short_sha.outputs.short_sha }}
+            makingjjj/lv3-final-mission:latest
 
   deploy:
     runs-on: [ self-hosted, lv3-final-mission-dev ]
