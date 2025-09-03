@@ -20,6 +20,6 @@ public class RegisterPlayerUseCase {
             throw new IllegalArgumentException("이미 사용 중인 닉네임이야");
         }
         return playerRepository.save(
-                Player.of(signInRequest.nickname(), signInRequest.password(), signInRequest.email(), PlayerStatus.GO));
+                Player.of(signInRequest.nickname(), signInRequest.password(), signInRequest.email(), PlayerStatus.STOP));
     }
 }
