@@ -45,6 +45,6 @@
   - **프로파일 기반 설정 일관성**
     - 런타임에 `SPRING_PROFILES_ACTIVE=<profile>`(예: `local`, `dev`)만 지정하면 동일한 프로파일 키로 **세 계층**이 자동 정렬됨 → 환경변수는 `.env.<profile>`에서 주입, 스프링 설정은 `application-<profile>.yml` 로드, 배포는 `docker-compose.<profile>.yml` 사용 → 한 지점에서 프로파일만 바꿔도 **환경·애플리케이션·배포 구성이 논리적으로 분리·연동**
   - **Self-hosted runner 사용 이유**
-    - EC2가 **퍼블릭 서브넷**에 있으나 **보안그룹/네트워크 정책상 외부(공용망) 인바운드 접근 불가**, 사실상 우아코스 Wi-Fi 등 제한된 경로만 허용
-      - 실질 인바운드가 닫혀 있어 SaaS 러너가 직접 접근 불가
+    - EC2가 **퍼블릭 서브넷**에 있으나 **보안그룹/네트워크 정책상 외부(공용망)에서 ssh 포트 접근 불가**, 사실상 우아코스 Wi-Fi 등 제한된 경로만 허용
+      - SaaS 러너가 직접 접근 불가
     - Self-hosted runner가 **외부로 폴링(outbound)** 하여 GitHub Actions 작업을 가져오는 모델이므로 인바운드 비개방 환경에서 적합
